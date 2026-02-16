@@ -4,4 +4,27 @@ import './index.css'
 
 
 const root = createRoot(document.getElementById("root"));
-root.render(<h1>Hello, Static Pages in React!</h1>);
+root.render(
+   <Page />
+)
+
+
+export default function Page (){
+    return (
+       <>
+            <header>
+                <img src="src/assets/react-logo.png" width="40px" alt="React logo" />
+            </header>
+            <main>
+                <h1>Reason I am excited to learn React</h1>
+                <ol>
+                    <li>React is a popular library, so I will be able to fit in with all the coolest devs out there! 😎</li>
+                    <li>I am more likely to get a job as a front end developer if I know React</li>
+                </ol>
+            </main>
+            <footer>
+                <small>© 2026 Lokha development. All rights reserved.</small>
+            </footer>
+        </>
+    )
+}
