@@ -5,8 +5,8 @@
 body {
     margin: 0;
     font-family: Inter, sans-serif;
-    background-color: #e9eaeb;
-    color: white;
+    
+    
 }
 
 header {
@@ -28,4 +28,39 @@ header > h1 {
     font-size: 0.9rem;
     font-weight: 500;
     font-family: Inter;
+}
+
+article.journal-entry {
+    display: flex;
+    margin-bottom: 36px;
+    margin-top: 36px;
+    margin-left: 19px;
+    
+}
+
+.main-image {
+   height :100% ;
+   width: 100% ;
+   object-fit: cover;
+}
+
+.main-image-container{
+    width: 125px;
+    height: 168px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-right: 19px;
+}
+
+article.journal-entry .marker {
+    width: 7px;
+    margin-right: 4px;
+}
+
+.country-name{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-right: 10px;
 }
