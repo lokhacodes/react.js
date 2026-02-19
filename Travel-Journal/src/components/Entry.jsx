@@ -1,33 +1,26 @@
-/**
- * Challenge: Build out the Entry component and render 1 instance of it
- * to the App
- * 
- * For now, just hard-code in the data, which you can find in
- * japan.md so you don't have to type it all out manually :)
- * 
- * Notes:
- * – Only render 1 instance of this Entry component for now
- * – I've pulled in marker.png for the little map marker icon
- *   that goes next to the location name
- * – The main purpose of this challenge is to show you where our limitations
- *   currently are, so don't worry about the fact that you're hard-coding all
- *   this data into the component.
- */
-
-export default function Entry() {
+export default function Entry(props) {
     return (
         <article className="journal-entry">
-            <div className="main-image-container"> <img className="main-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUPEBAVFRUVFRUVFRUVFRUVFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGy0dHx0tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ0BQQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAAAgEDBAUGB//EADsQAAICAAMFBQUIAQIHAAAAAAABAhEDEiEEMUFRcQVhgZGhEyKx0fAGMkJSYnLB4ZIVghQWM1OisvH/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAb/xAAmEQEAAgEDBAIBBQAAAAAAAAAAARECAxMhBBIxUUFhMhQiQlJx/9oADAMBAAIRAxEAPwDRRNDUFH0z58tBQ9BQCUTQ1BQQtBQ9BQCUTQ1BQC0FD0FBCUTQ9BQCUFD0TQCUFD0FAJQUPRNAJQUPQUFJQUPRNAJQUPQUAlBQ9BQCUFD0FAJQUPQUAlBQ9BQCUFD0FAJRFFlBQCURRZQUBXQD0SBXQUPRNEtSUFD0FBCUTQ9BQCUFD0TQFdE0PQUAlE0PQUEJQUPRNAJQUPRNAV0TQ9BQCUFFlBQFdE0PQUAlBQ9E0BXQUWUFAV0TQ9BQCUFD0FAV0FFlBQFdBRZRFAJQUWURQCUFD0FAJQUPQUAlEFlAAlBQ9E0ZtpXRND0FCwlBQ9E0LRXRND0TQsV0TQ9BQtCUFFlBQsJQUPRNCwlBQ9E0LFdE0PQZRYSgosyhlFiuiaHoKFqSgoegoWEoKHoKFhKCiygoWK6Ch6ChYSgoegoWEoKHoKASgoegoBKCh6CgEoiiygoISgHygFJQUPROUxbSuiaHoMosolBRZlChaK6JoegyiyiUFFmUnKLKV5SaHoKFlEyk5R6ChZRMpOUfKdHs7smeLq/djze9/tXHqZy1Ixi5aw08s5rFzFE7XZ32dnOpYvuR5fifyO3snZ+Fg1kjc3ub1l1b4LoaYYrcmr0WjfN8UuSR4NXrJnjDh79Lo4jnPlyo/ZjCvWc30cVXddajr7NYNvWb5K157jsrcEHz6Hn/AFGp7en9Ppf1eY2n7O1rCb/3a+qo4+0bLPDdSi138H0Z776Zl2jZIyVNJrk9Ttp9XlH5cuOp0mGX48PC5Qo9FtXYkX9x5XwT1i+5Pgcbadlnhupxr4eZ7tPWxz8PBqaGeHlmoKLMoUdbcqV0FFlBQspXQUWURQsolBQ9BQsolBQ9BQsolBQ9BQsolBQ9BQsolBQ9BQspXlJHoBYWgoeiaOdulK6JoegoWUSgoeiaFpSuiaHoKFlEoKLKChZRKCiyiHS3uuosotF2y7JPEdQV83wXVlax8NfrfBK1G/1S+Wp1cDaZJa5Y1uinVLi8u/zpnDU16j9r06XTTP5cN2xdkYWH703mffpFeHHx8jRj7ZVZat3TldJLVuvnS1RzMXtbBw1mxJ3J8FrXRLRP59Tj7T9qcNyvJKstPja4K3u5t8TxTGepNzy98RhpxUcPQbVjqKze2ak1byyUtObWqfhz3mnsrtCOIqV6aNNLSuDp6ng8Pb8LEr2uK4q/epXOluSpJcX3btDrR+0uzwWXCjJRWVKKSVxWsm3zeupqdGaqkjUh7WOMr37rRT7V6vlJ+WqR47/mpOdvRezXhLS78NNOJdsX2iw5OUcR1m0t+aa6bzGzlHw1uYy9nHFTK54lJ19fSObh9oRqpSytaSv8L4N9z5mCPa6xFPBXu4kbjT41xT5bn0MRhLXdD0LaenMoxNnUllatdL9DFsnaMZ3HVSjo1x8vEuntWVrX+hUwcS5W2dlNW4buXyfzOa4NOmeuljRa97z+FmTa9jjLf05O+5nr0+qmOMnk1elieceHnMoUbdo2GUN2q9V1Rlo9mOcZRcPDlhOM1JMpGUtoii2zSvKGUsoKFlK8oZSygoWUryhRZQUWyldBRZQULKV0FFlBQspXlAsoBZRKJoago4260WgoegotlEomhqChaUXKFBiYkYq5SUVzbSXqYMftvAh+Jy/ar9dws7XQoTFxIwVykku88/tf2hnLTDjl73q/Bbl6nKxMeUncpNvm3r5l5ajTvy9DtfbUVphxv9T0XlvfocfH2qc3c5N/XLgZ4SfEauS8yW7RjEeF0dsnFaPpzXTl4CPa5ttuT1KZd7EbFQXLS9qb4lU8UqCy1BOUmUjXsE43lbpv7re66pp9zTaMJNiYtmJpc24unvWnih8PFmra0ta6Lc6XyM1jZ+H10FLbr7N2q4pydtxpRUm37r+9Hp8hcfaVKsXDdNPVXrH8tfp39LrickaLM9keWu+Xdj2i5NTupR5Or6c18PQ6ku0nPLiRk+Uk3V7t/Jp3w42eRUho4jWqMTpxLcakw9vg9oOD39It6PuT+uBpj2pmjKH3o1q9E41vVOsx4ZbZJqr+uBf/AMbK99Pu08TlOi6xqPTY+1S0lhYjkuPFquDveq58t6M0e14N1iRr9UN3jFnEwu0JwalF01xW99efiNj7d7R3OKXfFJPx5r61NY4TCZTGUcvS4bUlmg1Jc1/K3rxJo8dnadxk1yrRmvZ+28WD9731xT0fnzO0TLy5aUfD01BRzMHt7BlvzR6q/VHRwNohiK4SUuj1XVcC25TjMGoMo9BQtKJlDKPQULKJQUPQULKV0GUsoKFlK8pI9ECyldBRyJfaLC4Qm/CK/kxY/wBo8Rv3IRiu/wB5/FHOpdu16Wgo8lPt7HemaMekV/NmTG2zFn97Fk1yt15LQtHY9XtPauDh6Oab5R95+mi8Tj7Z9opPTDio971fgty9Th7ugVyNREL2LcXFnN5pybffqVa8gsZtltqkJMZQ5srGiQhbmXAa9Clyoj2qI0syMPZPkJ7UdTZblKgPD0Ky/wBtzRXKmIyJx9EAlxIo1bFCiSACGsiyCQHUtSZVem4QlBo6HzFaLILiZlYNmGzL63FclyZEHWlEata0VSfPUtU0hcRxe4RKzClrkTCUou02nwadPzQOJCs1bnMOns/buPD7zUl+pW/NfydjY+3sKek/cffqvP50eYjIhpE4Tse9hJSVxaa5p2vMmjwuDiThrCco9G0dDA7ex478s+qp+lEpOx6qgo89h/ad3UsHyl/DRvwO3tnlo5OL/Uv5VolSzTpUFEYWLGauMlJc00/gOZsotAMSLKfMvbJkZ1zKLJjFvcjbtbR7vBolRvd/YkMDmx5tL8T87Ja0sycLZL00t/Ex+1lzHhN8wXC5zQKXd6FUpKyE4835FRb7SuBGYpWI+pbgyi96QsQ5IU1Rw48kToTuXtZopvgWLNyLGwHcvalOgoVpcgcV3olqlxBR5k2RnXMWiETRLnwQrm+RbKhNCuLJztE+1FpUBQYZRVid9ExnfEtyVBlJLeSsVCtMSr4EPCxzBTKoxJV795UWZgsRTQZgqxyIzC5ugsmEWZ0NfIojLoLPaIx310Wr8kJmvKxy02DnRmnt8Y6u/Qpl2th3VP0Oe7h7b28vTepCppmN9qYdaRfi18DJj9rxT0Xn/Q3sPabWTsRtO02ujNeH2ptEd2LJ9df/AGs8v/qknTiqIXaOJxZJ18V2Jl6//Xtp/P8A+MfkB43/AFDE5/XkBnfw9GxLqx2HEf4fh8DRDsuXGSXS38joxa1ppXxd/wAiY8bVOSpb1X9mN3KXeNHGPtlew4S+/iv0XxG9jsyW+/8Adr6aErYL1UdOXH1IlscVblCXhX8Md0e5Oyv4wbCwsCLtOLvm068zSlhpfh80c+SwFvUl+5SHe27PGvfXRKXyJlP+rjX06CUdyS8kMowX4UvBHNh2pgcZJPk1fqLPtfZlvm3+2Mn8EYmW4bdp2XDnxp91fA5eNg5N19aNGH2vs0rqdNfmTj6tUXLFjOLyyi1u0lFq+Vq+43hqTDnnpxLmRx2u/qXwxUzPPD1pNf5J+o8Nlb3OP+aPRMw80RLSiSYbFe7EV/uT+BojsM/zo5znj7dYwyn4ZwLcTYsVcFXO9PUqexzfBeH9jvj2k4ZeleI0t4scjLMTs1pW5KNatykkkuZkxYRim/bYbpX7rcvKlqXvx9pOGfprjBBKVc/icz20n93T65IR47321z18OBzy18Y8ct46WU/TpPF735EYmLyl6HGxcd7sz6t2UvEfP1Jv/Rs/btvFf0kSsTuOFCWv3maPYurzvlxevgJ6mI+E2J9uysZcyJ40Vq5Lxo4WIsrpNvr/ACVQk9b5+A3/AKa2ft6Rbbh/nRDx4vVTj6HAcnusmL4vgZ359LtQ7csdcZLwaCe0RStyS8mcOWJbIbvei78+jZj26q2+Hf5FWL2mluXmc5t2K4rdfmSdbJY0sWqe2t72+Gi0WvxMcsR3xpPcnXoV5ouXDvGxZ0uvDoc5mZ8tRURwWW/d0RbRRgX9/wCuRdev1qFgy1FelPyJrUJzXH+iKW3e7UKfmEZWWN8F5BFfkA9S5ogWIjt+JH7sml3N875lj7Ux2/8AqPlo6dGWEVuKliaN1uKNktuxv+5L/J/ArniTlTcs37tfHqC1j4f0UxdSr63BVkpN6t/IVTsLprvREldPl6hDwk+YSnX8iQ3vvHSAlt0V5U96/otw9HRXi6aoQNOHtE1Ssujtckq0b8tOX9mZrQiJYzyjxLM4Yz8Nb27SsqvjyKZbXNv7+X9q182LhrM2U4mi8C7mU8Wm3jHw0e1bVTcpK7qUm/K3QYGNOOmZpO/dT08txXDc34ETlpdcPgc21jxHd3fDp3EPFd6ehXm1YYb3lVa8e+bS4ssTtauvrgZZFsGSYCSjyfiEXzJmtL+uZWpPT63f/Ci5PR8y/Z23Ud2vBcObZnh3jYDp33WSYGnbcBLc39d/EyOK56lu0Y7qyje33a+YxuuSVkXvT6DcylT97wNGd+gkUwlrr9eY+Jdab/4K8N6sbaG0m76Fk+EN6mWbt6kRxHuITDEzYjadkTnetgxXqGUxm6qyyOM1v1KEWFkaYYiZe1dHOjKnaN0eHfqSXTGbPGVfAJ99DY8EUOTepFPn7gDKBbH/2Q==" alt="japan"  /> </div>
-            <div>
-                <img className= "marker" src="/src/assets/marker.png" alt="marker" />
-                <span className="Country-name">Japan</span>
-                <a href="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu" >View on Google Maps</a>
-                
-                <h2>Mount Fuji</h2>
-                <p>12 Jan, 2021 - 24 Jan, 2021</p>
-                <p>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
-
+            <div className="main-image-container">
+                <img 
+                    className="main-image"
+                    src={props.img.src} 
+                    alt={props.img.alt}
+                />
             </div>
+            <div className="info-container">
+                <img 
+                    className="marker"
+                    src="src/assets/images/marker.png" 
+                    alt="map marker icon"
+                />
+                <span className="country">{props.country}</span>
+                <a href={props.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.title}</h2>
+                <p className="trip-dates">{props.dates}</p>
+                <p className="entry-text">{props.text}</p>
+            </div>
+            
         </article>
     )
 }
