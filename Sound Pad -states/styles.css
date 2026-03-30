@@ -27,3 +27,7 @@ button {
     cursor: pointer;
     opacity:0.1;
 }
+
+button.on {
+    opacity: 1;
+}

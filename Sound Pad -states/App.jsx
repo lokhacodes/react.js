@@ -3,7 +3,7 @@ import React from "react"
 import Pad from "./Pad"
 
 
-export default function App({darkMode}) {
+export default function App() {
   
    const [pads, setPads ] = React.useState(padsData)
     
