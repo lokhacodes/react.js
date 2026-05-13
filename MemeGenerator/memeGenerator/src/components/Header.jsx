@@ -1,4 +1,4 @@
-import trollFace from "/public/favicon.svg"
+import trollFace from "/src/assets/favicon.svg"
 
 export default function Header() {
     return (
