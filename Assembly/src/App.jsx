@@ -5,12 +5,18 @@ import clsx from "clsx"
 
 
 export default function AssemblyEndgame() {
+  //State values
   const [currentWord, setCurrentWord] = useState("react")
   const [gussedLetters, setGussedLetters] = useState([])
 
-
-
-
+  //Derived values
+  const wrongGuessesCounnt = gussedLetters.filter(letter => !currentWord.includes(letter)).length
+  const isGameWon = currentWord.split("").every(letter => gussedLetters.includes(letter))
+  const isGameLost = wrongGuessesCounnt >= languages.length - 1
+  const isGameOver = isGameWon || isGameLost
+  
+  
+  //Static Values
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
   
   function addGuessedLetter(letter) {
@@ -41,14 +47,21 @@ export default function AssemblyEndgame() {
   )}
   )
 
-  const languageElements = languages.map((lang) => {
+  const languageElements = languages.map((lang, index) => {
+    const isLangaugeLost = index < wrongGuessesCounnt
     const styles = {
       backgroundColor: lang.backgroundColor,
       color: lang.color,
     }
 
+    const className = clsx("chip", isLangaugeLost && "lost" )
+
     return (
-      <span className="chip" style={styles} key={lang.name}>
+      <span 
+      className={className}
+      style={styles} 
+      key={lang.name}
+      >
         {lang.name}
       </span>
     )
@@ -84,7 +97,9 @@ export default function AssemblyEndgame() {
       <section className="keyboard">
           {keyboardElements}
       </section>
-      <button className="new-game">New Game</button>
+      {isGameOver && (
+        <button className="new-game">New Game</button>
+      )}
     </main>
   )
 }
