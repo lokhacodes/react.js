@@ -42,6 +42,16 @@ section.game-status {
     margin-block: 30px;
 }
 
+section.game-status.won {
+    background-color: #10A95B;
+}
+
+section.game-status.lost {
+    background-color: #BA2A2A;
+}
+
+
+
 section.game-status > p {
     margin: 5px;
 }
